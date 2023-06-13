@@ -71,7 +71,7 @@ img {
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*===== CLASES CSS ===== */
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -182,12 +182,12 @@ img {
   background-color: var(--first-color);
 }
 
-/*=== Show menu ===*/
+/*=== Mostrar menu ===*/
 .show {
   right: 0;
 }
 
-/*===== HOME =====*/
+/*===== home =====*/
 .home {
   position: relative;
   row-gap: 5rem;
