@@ -9,9 +9,12 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
+
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
         <title>Franco Margarido</title>
     </head>
-    <body>
+    <body class="dark">
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -33,6 +36,10 @@
                     <i class='bx bx-menu'></i>
                 </div>
             </nav>
+            <button class="switch" id="switch">
+                <span class="boton"><i class="fas fa-sun"></i></span>
+                <span class="boton"><i class="fas fa-moon"></i></span>
+            </button>
         </header>
 
         <main class="l-main">
@@ -167,22 +174,29 @@
                 </div>
             </section>
 
+
+
             <!--=====CONTACTO =====-->
             <section class="contact section" id="contacto">
                 <h2 class="section-title">Contacto</h2>
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form" id="contact-form">
-                        <input type="text" name="user_name" required placeholder ="Insert your Name" class="contact__input">
-                        <input type="mail" name="user_email" required placeholder="Insert your Email" class="contact__input">
-                        <textarea name="user_project" id="contact-message" required placeholder="Insert a Message" class="contact__input"></textarea>
+                    <form action=""   class="contact__form" id="contact-form">
+                        <input type="text" name="name" required placeholder ="Inserte su Nombre" class="contact__input">
+                        <input type="mail" name="email" required placeholder="Inserte su Email" class="contact__input">
+                        <textarea name="message" id="contact-message" required placeholder="Inserte su Mensaje" class="contact__input"></textarea>
                         <p class="contact__message" id="contact-message"></p>
                         <button type="submit" class="contact__button button"">
-                            Send Message
+                            Enviar
                         </button>
                     </form>
+                    <a href="mailto:francoexe2004@gmail.com" id="pp">Mandame</a>
                 </div>
-    </section>
-        </main>
+    </section> 
+</main>
+
+
+
+
 
         <!--===== FOOTER =====-->
         <footer class="footer">
@@ -190,9 +204,7 @@
             <div class="footer__social">
                 <a href="https://www.instagram.com/franco_margarido/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
             </div>
-        </footer>
-
-
+    </footer>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
         <!--===== SCROLL REVEAL =====-->
@@ -200,5 +212,5 @@
 
         <!--===== MAIN JS =====-->
         <script src="./js/main.js"></script>
-    </body>
-</html>
+
+

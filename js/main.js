@@ -55,26 +55,44 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
 
-/*===== EMAIL JS =====*/
+/*===== EMAIL =====*/
 
-// (function() {
-// https://dashboard.emailjs.com/admin/account
-// emailjs.init('ZIeMGejx36fQRJ__7');
-// })();
+const form = document.querySelector('#contact-form')
+const button = document.querySelector('#pp')
 
-// const contactForm=document.getElementById('contact-form'),
-//     contactMessage=document.getElementById('contact-message')
+form.addEventListener ('submit', handleSubmit)
 
-//     const sendMail = (e) =>{
-//         e.preventDefault()
-//     }
+function handleSubmit (event){
+    event.preventDefault()
+    const forms = new FormData(this)
+    console.log (forms.get ('name'));
 
 
-//     emailjs.sendForm('service_pu49a0m' ,'template_xvyrj3q', '#contact-form', 'ZIeMGejx36fQRJ__7')
-//     .then(() =>{
-//         contactMessage.textContent= 'Message sent successfully'
-//     }, ()=>{
-//         contactMessage.textContent= 'Message not sent (service error)'
-//     })
+    button.setAttribute('href' , `mailto:francoexe2004@gmail.com?subject=${form.get('name')}&{form.get('email')}&body=&{form.get('message')}`)
+    button.click()
+}
 
-//     contactForm.addEventListener('submit, sendEmail')
+/*===== BOTON DE MODO OSCURO =====*/
+
+const btnSwitch = document.querySelector('#switch');
+
+btnSwitch.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+	btnSwitch.classList.toggle('active');
+
+
+	if(document.body.classList.contains('dark')){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+
+
+if(localStorage.getItem('dark-mode') === 'true'){
+	document.body.classList.add('dark');
+	btnSwitch.classList.add('active');
+} else {
+	document.body.classList.remove('dark');
+	btnSwitch.classList.remove('active');
+}

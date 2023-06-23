@@ -45,6 +45,7 @@ html {
 }
 
 body {
+  background-color: #eeee;
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -112,7 +113,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #eeee;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -361,7 +362,7 @@ margin-bottom: var(--mb-2);
   transform: scale(1.1);
 }
 
-/* ===== CONTACT =====*/
+/* ===== CONTACTO =====*/
 .contact__container{
     padding-top: 1rem;
 }
@@ -410,7 +411,10 @@ color: #000;
     left: 0;
     bottom: 4.5rem;
     font-size: var(--smaller-font-size);
+  }
 
+  #pp{
+    opacity: 0;
   }
 
 /* ===== FOOTER =====*/
@@ -555,4 +559,108 @@ color: #000;
   .home__img {
     width: 450px;
   }
+}
+
+/* ===== MODO OSCURO=====*/
+
+body.dark {
+  background: #111111;
+}
+body.dark nav {
+  background: #111111;
+
+}
+
+body.dark i{
+  color: #FEFEFE;
+}
+body.dark nav a {
+  color: #C8C8C8;
+}
+
+body.dark nav a:hover {
+  color: #FEFEFE;
+}
+
+body.dark header{
+  background: #111111;
+  color: #FEFEFE;
+}
+
+body.dark main {
+  color: #FEFEFE;
+}
+.switch {
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background: orange;
+  color: #000;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.boton {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+/* ===== FIN DEL MODO OSCURO=====*/
+
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
 }
