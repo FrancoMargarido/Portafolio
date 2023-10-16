@@ -94,5 +94,7 @@ if(localStorage.getItem('dark-mode') === 'true'){
 	btnSwitch.classList.add('active');
 } else {
 	document.body.classList.remove('dark');
-	btnSwitch.classList.remove('active');
-}
+	btnSwitch.classList.remove('active')
+    }
+
+
